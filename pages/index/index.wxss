@@ -1,0 +1,141 @@
+.page {
+    position: relative;
+    background-color: rgba(245, 244, 244, 0.8);
+}
+
+.section-bar {
+    height: 120rpx;
+    width: 100%;
+    /* border: 1px solid black; */
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.section-bar-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 120rpx;
+    width: 100%;
+}
+
+.section-bar-item {
+    text-align: center;
+    height: 80rpx;
+    color: #515151;
+    width: 130rpx;
+    /* width: 140rpx; */
+}
+
+.section-bar-item-matter {
+    font-size: 35rpx;
+    font-weight: 600;
+}
+
+.picker .section-bar-item-img {
+    height: 20rpx;
+    width: 20rpx;
+}
+
+.section-bar-item-normal {
+    font-size: 35rpx;
+    font-weight: 500;
+}
+
+.section-bar-add-button view {
+    display: inline-block;
+    margin-left: 10rpx;
+}
+
+.poster {
+    height: 130rpx;
+    width: 100%;
+    /* border-top: 1px solid #515151; */
+    overflow: hidden;
+    border-radius: 0 35rpx 0 35rpx;
+}
+
+.picker-item {
+    position: absolute;
+    top: 75rpx;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.picker-items {
+    font-size: 22rpx;
+    text-align: center;
+    /* padding-left: 20rpx; */
+    /* padding-right: 20rpx; */
+    color: #696969;
+    margin-left: -12rpx;
+    height: 30rpx;
+    width: 130rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tab {
+    height: 100rpx;
+    padding-bottom: 5rpx;
+    width: 100%;
+    font-size: 30rpx;
+    color: #696969;
+    /* border: 1px solid black; */
+    /* background-color: #fff; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tab-active {
+    font-size: 40rpx;
+    color: #FFA500;
+    animation: tabchange .3s linear 1;
+    border-bottom: 2px solid #FFA500;
+}
+
+@keyframes tabchange {
+    0% {
+        font-size: 30rpx;
+        border-bottom: 2px solid #FFA500;
+    }
+    25% {
+        font-size: 32rpx;
+        border-bottom: 2px solid #FFA500;
+    }
+    50% {
+        font-size: 35rpx;
+        border-bottom: 2px solid #FFA500;
+    }
+    100% {
+        font-size: 40rpx;
+        border-bottom: 2px solid #FFA500;
+    }
+}
+
+.bar-add {
+    position: fixed;
+    top: 500rpx;
+    right: 0;
+    font-size: 25rpx;
+}
+
+.bar-add-button {
+    border-radius: 50%;
+    height: 150rpx;
+    width: 150rpx;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 150rpx;
+    background-color: #f1c159;
+    overflow: hidden;
+}
+
+.search {
+    height: 30rpx;
+    width: 30rpx;
+}

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "main-list": "/components/main_list/main_list"
+  }
+}

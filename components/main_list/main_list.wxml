@@ -1,0 +1,34 @@
+<!-- components/main_list/main_list.wxml -->
+<view class="list-bar" animation="{{animationlist}}">
+  <view class="list-bar-item">
+    <view class="list-item-left">
+      <image src="{{listInfo.listImgUrl}}" style="height:100%;width:100%" />
+    </view>
+    <view class="list-item-middle">
+      <view class="item-middle-top">
+        <view class="middle-top-name">
+          <text>{{listInfo.listName}}</text>
+        </view>
+        <view class="middle-top-mat">
+        {{listInfo.matter}}
+          <text>-{{listInfo.listType}}</text>
+        </view>
+        <view class="middle-top-timadd">
+          <text>{{listInfo.listTime}} | {{listInfo.listAddr}}</text>
+        </view>
+        <view class="middle-top-maj">
+          学院：
+          <text>{{listInfo.listMajor}}</text>
+        </view>
+        <view class="item-middle-foot">
+          详细描述：
+          <text>{{listInfo.listDiscrib}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="list-item-right" bindtap='starChange'>
+      <image wx:if="{{listInfo.like}}" src="/img/爱心-块.png" />
+      <image wx:if="{{!listInfo.like}}" src="/img/爱心-线.png" />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/user/user",
+    "pages/store/store",
+    "pages/user/feedback/issues",
+    "pages/user/about/about",
+    "pages/user/getMyInfo/getMyInfo",
+    "pages/user/getDone/getDone"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#EE7600",
+    "navigationBarTitleText": "悠悠行",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#515151",
+    "selectedColor": "#FF7F24",
+    "list": [
+      {
+        "text": "约伴",
+        "iconPath": "img/约伴.png",
+        "selectedIconPath": "img/21act_邀约.png",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "聊天",
+        "iconPath": "img/3navbar_消息.png",
+        "selectedIconPath": "img/4navbar_消息_选中.png",
+        "pagePath": "pages/cart/cart"
+      },
+      {
+        "text": "我的",
+        "iconPath": "img/1navbar_我的.png",
+        "selectedIconPath": "img/2navbar_我的_选中.png",
+        "pagePath": "pages/user/user"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,42 @@
+<view class="contain">
+  <view class="card">
+    <view class="title">个人信息</view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+
+      <view class="contact">
+        <input bindinput="nameInput" value="{{name}}" maxlength="30" placeholder-class="pache" placeholder="姓名" />
+      </view>
+
+      <view class="contact">
+        <input bindinput="sidInput" value="{{sid}}" maxlength="30" placeholder-class="pache" placeholder="学号" />
+      </view>
+      <picker bindchange="choose" value="{{ids}}" range="{{gender}}" range-key="name">
+        <view class="campus">
+          <block wx:if="{{ids!==-1}}">当前选择：{{gender[ids].name}}</block>
+          <block wx:if="{{ids==-1}}">性别</block>
+        </view>
+      </picker>
+
+      <picker bindchange="choose" value="{{ids}}" range="{{college}}" range-key="name">
+        <view class="campus">
+          <block wx:if="{{ids!==-1}}">当前选择：{{college[ids].name}}</block>
+          <block wx:if="{{ids==-1}}">学院</block>
+        </view>
+      </picker>
+      
+      <view class="contact">
+        <input type="number" bindinput="classInput" value="{{class}}" maxlength="20" placeholder-class="pache" placeholder="班级" />
+      </view>
+
+        <button class="confirm" type="primary" formType="submit">保存</button>
+
+    </form>
+  </view>
+
+  <!--底部确认-->
+  <view class="shen_title">使用申明</view>
+  <view class="des">1. 请确保学号和班级百分百有效，之后将会实名核实。</view>
+  <view class="des">2. 在未经您同意及确认之前，本程序不会将您的注册信息用于任何其它商业目的。</view>
+  <view class="des">3. 本程序将对您所提供的资料进行严格的管理及保护，本程序将使用相应的技术，防止您的个人资料丢失、被盗用或遭篡改。</view>
+  <view class="des">4. 请您放心使用！</view>
+</view>

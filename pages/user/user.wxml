@@ -1,0 +1,70 @@
+<view class='user_container' >
+  <view class="head" bindtap='showMine'>
+    <view>
+      <view class="weui-media-box weui-media-box_appmsg">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb head_img" src="{{userInfo.avatarUrl}}" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{title}}</view>
+          <view class="weui-media-box__desc" style='color:#333'>{{studentnum}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-panel">
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_small-appmsg">
+        <view class="weui-cells weui-cells_in-small-appmsg">
+
+            <view class="weui-cell weui-cell_access" bindtap="showMine" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <icon class='icon iconfont wode' style='font-size:40rpx;margin-right:30rpx'></icon>
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view style='font-size:28rpx'>我的信息</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+
+            <view class="weui-cell weui-cell_access" bindtap="getDone" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <icon class='icon iconfont wancheng' style='font-size:40rpx;margin-right:30rpx'></icon>
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view style='font-size:28rpx'>已达成目标</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+
+  <!-- <button class="feedback"><image src="../images/feedback01.ico"></image>问题反馈</button>		 
+		  <button class="aboutUs"><image src="../images/about.ico"></image>关于我们</button> -->
+          <navigator url="/pages/user/feedback/issues" class="weui-cell weui-cell_access"  hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <icon class='icon iconfont fankui' style='font-size:40rpx;margin-right:30rpx'></icon>
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view style='font-size:28rpx'>帮助反馈</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+
+           <navigator url="/pages/user/about/about" class="weui-cell weui-cell_access"  hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <icon class='icon iconfont guanyu' style='font-size:40rpx;margin-right:30rpx'></icon>
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view style='font-size:28rpx'>关于我们</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+
+        </view>
+      </view>
+    </view>
+ </view>
+
+
+ 
+</view>
+

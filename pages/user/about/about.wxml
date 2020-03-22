@@ -1,0 +1,25 @@
+<!--about.wxml-->
+<view class="container">
+  <view class="content">
+    <view class="version">
+      <view class="version-title">
+        <text class="title-name">约行，从这一刻开始</text>
+        <text class="version-text">测试</text>
+      </view>
+    </view>
+    <view class="describe" wx:if="{{!showLog}}">
+        <text class="desc-title">简介</text>
+        <view class="desc-list">
+          <text class="desc-list-item">官网：http://www.cqupt.edu.cn</text>
+          <text class="desc-list-item">Github：https://turkeyca.github.io</text>
+        </view>
+        <text class="desc-content">当三闾大夫抱着石头与江水相拥，当西楚霸王自刎时的鲜血染红了整片夕阳，当普罗米修斯裸着身体被巨鹰啄食，当拉奥孔扭曲着身体仍想保卫自己的儿子，历史的悲风中发出阵阵悲鸣，但他们生命的结尾却那么响亮有力，数千年来仍叩击着人们的心灵，播放出永不低沉的生命绝唱！\n该小程序由计算机学院2017级卓越工程师班开发，有别于公众号的一种全新的连接用户与服务的方式，无需下载与安装即可在微信内被便捷地获取和传播，同时具有出色的使用体验。</text>
+        <!--text class="desc-content">更是/更有... （期待您的发现）</text-->
+    </view>
+  </view>
+  <view class="footer">
+
+    <text>计算机学院卓越班</text>
+    <text>Copyright @ {{year}} All Rights Reserved</text>
+  </view>
+</view>

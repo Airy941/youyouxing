@@ -1,0 +1,65 @@
+<view class="page">
+  <view class="section-bar">
+    <!-- 事项 时间 地点 -->
+    <view class="section-bar-left">
+      <view class="section-bar-item section-bar-item-matter">
+        <picker bindchange="bindPickerChange" class="picker" value="{{matterIndex}}" range="{{matterArray}}">
+          事件
+          <!-- {{matterArray[matterIndex]}} -->
+          <image class="section-bar-item-img" src="/img/66act_三角_下.png"></image>
+        </picker>
+      </view>
+      <view class="section-bar-item section-bar-item-normal">
+        <picker mode="multiSelector" bindchange="bindMultiPickerChangeDate" bindcolumnchange="bindMultiPickerColumnChangeDate" class="picker" value="{{dateIndex}}" range="{{dateArray}}">
+          日期
+          <!-- {{timeArray[timeIndex]}} -->
+          <image class="section-bar-item-img" src="/img/66act_三角_下.png"></image>
+        </picker>
+      </view>
+      <view class="section-bar-item section-bar-item-normal">
+        <picker bindchange="bindPickerChangeStartTime" class="picker" value="{{startTimeIndex}}" range="{{startTimeArray}}">
+          开始
+          <!-- {{matterArray[matterIndex]}} -->
+          <image class="section-bar-item-img" src="/img/66act_三角_下.png"></image>
+        </picker>
+      </view>
+      <view class="section-bar-item section-bar-item-normal">
+        <picker bindchange="bindPickerChangeEndTime" class="picker" value="{{endTimeIndex}}" range="{{endTimeArray}}">
+          结束
+          <!-- {{matterArray[matterIndex]}} -->
+          <image class="section-bar-item-img" src="/img/66act_三角_下.png"></image>
+        </picker>
+      </view>
+      <view class="section-bar-item section-bar-item-normal">
+        <picker mode="multiSelector" bindchange="bindMultiPickerChangeAddr" bindcolumnchange="bindMultiPickerColumnChangeAddr" class="picker" value="{{addrIndex}}" range="{{addrArray}}">
+          地点
+          <!-- {{addrArray[addrIndex]}} -->
+          <image class="section-bar-item-img" src="/img/66act_三角_下.png"></image>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <!-- 自定义添加搜索条件 -->
+  <!-- 选项下面的临时广告 -->
+  <view class="picker-item">
+    <view class="picker-items">{{matterArray[matterIndex]}}</view>
+    <view class="picker-items">
+      {{dateArray[0][dateIndex[0]]}} 月 {{dateArray[1][dateIndex[1]]}}日
+    </view>
+    <view class="picker-items">{{startTimeArray[startTimeIndex]}}</view>
+    <view class="picker-items">{{endTimeArray[endTimeIndex]}}</view>
+    <view class="picker-items">{{addrArray[1][addrIndex[1]]}}</view>
+  </view>
+  <view class="poster" bind:addform="addform" bindtap="addchange">
+    <image src="/img/云.png" style="position:absolute;height:160rpx;width:100%;top:110rpx;background-color:#fff" />
+  </view>
+  <view class="tab" style="background-color:#fff">
+    <view class="{{showtab ?'tab-active':''}}" bindtap="changeTab1">所有情况</view>
+    <view class="{{!showtab ?'tab-active':''}}" bindtap="changeTab2">俺的请求</view>
+  </view>
+  <main-list wx:if="{{showMain}}" wx:for='{{list}}' wx:key="item.listId" list-info="{{item}}" bind:select="select" animation="animationlist"></main-list>
+  <my-request wx:if="{{showList}}" wx:for='{{mylist}}' wx:key="item.listId" list-info="{{item}}" bind:select="select"></my-request>
+  <request-add wx:if="{{showAdd}}" bind:changeTab2="changeTab2"></request-add>
+  
+  <view style="height:120rpx;width:100%"></view>
+</view>

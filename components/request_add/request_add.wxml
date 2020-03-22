@@ -1,0 +1,51 @@
+<!-- components/request_add/request_add.wxml -->
+<view class="add-form">
+    <form bindsubmit="formSub">
+        <view class="add-form-item" >
+            <picker name="matter" value="{{matterArray[matterIndex]}}" bindchange="bindPickerChange" class="add-form-picker" value="{{matterIndex}}" range="{{matterArray}}">
+                事件*
+                <view>{{matterArray[matterIndex]}}></view>
+                <!-- {{matterArray[matterIndex]}} -->
+            </picker>
+        </view>
+        <view class="add-form-item">
+            事件描述
+            <input name="type" class="add-form-input" value="" type="text" placeholder="待填写"></input>
+        </view>
+        <view class="add-form-item">
+            <picker  name="date" mode="multiSelector" bindchange="bindMultiPickerChangeDate" bindcolumnchange="bindMultiPickerColumnChangeDate" class="add-form-picker" value="{{dateIndex}}" range="{{dateArray}}">
+                日期*
+                <view>{{dateArray[0][dateIndex[0]]}}月 {{dateArray[1][dateIndex[1]]}}日></view>
+            </picker>
+        </view>
+        <view class="add-form-item">
+            <picker name="start_time" bindchange="bindPickerChangeStartTime" class="add-form-picker" value="{{startTimeIndex}}" range="{{startTimeArray}}">
+                开始*
+                <view>{{startTimeArray[startTimeIndex]}}></view>
+            </picker>
+        </view>
+        <view class="add-form-item">
+            <picker name="end_time" bindchange="bindPickerChangeEndTime" class="add-form-picker" value="{{endTimeIndex}}" range="{{endTimeArray}}">
+                结束*
+                <view>{{endTimeArray[endTimeIndex]}}></view>
+                
+            </picker>
+        </view>
+        <view class="add-form-item">
+            <picker name="place" mode="multiSelector" bindchange="bindMultiPickerChangeAddr" bindcolumnchange="bindMultiPickerColumnChangeAddr" class="add-form-picker" value="{{addrIndex}}" range="{{addrArray}}">
+                地点*
+                <view>{{addrArray[1][addrIndex[1]]}}></view>
+            </picker>
+        </view>
+        <view class="add-form-item">
+            详细描述
+            <input name="description" class="add-form-input" value="" type="text" placeholder="以'/'分隔"></input>
+        </view>
+        <button class="add-form-btn"  type="add-form-btn" 
+            hover-class="button-hover" hover-stop-propagation="false" 
+             form-type="submit" >
+            确定约伴
+        </button>
+    </form>
+</view>
+

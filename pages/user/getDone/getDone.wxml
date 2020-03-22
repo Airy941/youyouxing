@@ -1,0 +1,8 @@
+
+<view class="list-bar">
+    <view class="list-bar-item">
+      <view class="list-item-left">
+        <view style="height:100%;width:100%" >约行次数</view>
+      </view>
+    </view>
+</view>
