@@ -1,1 +1,25 @@
 /* pages/cart/cart.wxss */
+.hidden {
+    display: none !important;
+}
+.tab {
+    height: 100rpx;
+    padding-bottom: 5rpx;
+    width: 100%;
+    font-size: 30rpx;
+    color: #696969;
+    /* border: 1px solid black; */
+    /* background-color: #fff; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.tab-active {
+    font-size: 40rpx;
+    color: #FFA500;
+    animation: tabchange .3s linear 1;
+    border-bottom: 2px solid #FFA500;
+}
+.canScroll{
+    height: 1004rpx;
+}

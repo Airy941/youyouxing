@@ -1,41 +1,18 @@
-// pages/cart/cart.js
-import {
-  getLikeMe
-} from "../../service/cart";
-
+// check.js
 Page({
-  creat:function(){
-    //请求响应的数据
-    this.setData({})
-  },
+
   /**
    * 页面的初始数据
    */
-  onLoad:function(option){
-    getLikeMe().then(
-      res =>{
-        console.log(res);
-      }
-    )
-  },
-  LikedMe: function (e) {
-    this.setData({
-      liked: true,
-    });
-  },
-  MyPick: function (e) {
-    this.setData({
-      liked: false,
-    })
-
-  },
   data: {
-    liked: true,
-    list: [
+    item:0,
+    sex:true,
+    list:[
       {
       matter: '约自习',
       listType: '物理',
       listId: 0,
+      listSex:'male',
       listAddr: '老校门', //地点
       listName: 'Airy491', //姓名
       listMajor: '计算机科学与技术', //学院
@@ -53,6 +30,7 @@ Page({
         matter: '约自习',
         listType: '高数',
         listId: 1,
+        listSex:'female',
         listName: 'FunORMA', //姓名
         listImgUrl: '/img/head.JPG', //头像
         listMajor: '计算机科学与技术', //学院
@@ -66,6 +44,7 @@ Page({
         matter: '约运动',
         listType: '篮球',
         listId: 2,
+        listSex:'male',
         listName: 'Naruto', //姓名
         listImgUrl: '/img/head.JPG', //头像
         listMajor: '计算机科学与技术', //学院
@@ -79,6 +58,7 @@ Page({
         matter: '约拼车',
         listType: '',
         listId: 3,
+        listSex:'female',
         listName: 'Airy491', //姓名
         listImgUrl: '/img/head.JPG', //头像
         listMajor: '计算机科学与技术', //学院
@@ -92,6 +72,7 @@ Page({
         matter: '约运动',
         listType: '排球',
         listId: 4,
+        listSex:'male',
         listName: 'Airy491', //姓名
         listImgUrl: '/img/head.JPG', //头像
         listMajor: '计算机科学与技术', //学院
@@ -103,6 +84,75 @@ Page({
         //select
       },
     ],
-}
+  },
 
-});
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    console.log(options);
+    this.setData({
+      item:options.item
+    })
+    console.log(this.data.list[options.item].listSex);
+    if (this.data.list[options.item].listSex == "male"){
+      this.setData({
+        sex:true,
+      })
+    }
+    else {
+      this.setData({
+        sex:false,
+      })
+    }
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})

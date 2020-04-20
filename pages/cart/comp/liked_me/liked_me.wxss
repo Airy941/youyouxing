@@ -1,0 +1,59 @@
+/* components/order-list/liked_me.wxss */
+.box{
+    width: 100%;
+    height: 150rpx;
+    background: white;}
+.box .wrap{
+    width: 95%;
+    height: 148rpx;
+    background: white;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border-bottom: 2rpx solid #f8f8f8;
+
+}
+.wrap .user-img image{
+    border-radius: 50%;
+    width: 100rpx ;
+    height: 100rpx;
+}
+.wrap .user-text  {
+    width: 78%;
+    height: 100rpx;
+    display: inline-block;
+    font-size: 20rpx;
+    margin-left: 20rpx;
+}
+.wrap .user-text .user-name{
+    width: 50%;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 34rpx;
+    font-weight: 500;
+    color: #363636;
+}
+.wrap .user-text .user-time{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 28rpx;
+    color: #939393;
+    float: right;
+    margin-left: 20rpx;
+}
+.doSome{
+    display: inline-block;
+    font-size: 30rpx;
+    white-space: nowrap;
+    margin-left: -560rpx;
+    padding-top: 50rpx;
+    color: #a5a5a5;
+}
+.point{
+    width: 16rpx;
+    height: 16rpx;
+    border-radius: 50%;
+    background: #f40000;
+    position: fixed;
+    right: 70rpx;
+}

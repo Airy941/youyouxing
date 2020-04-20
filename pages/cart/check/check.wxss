@@ -1,0 +1,30 @@
+/* check.wxss */
+page{
+    background-color: white;
+}
+.top{
+    margin-top: 30rpx;
+    margin-left: 20rpx;
+}
+.top image{
+    border-radius: 50%;
+    width: 160rpx;
+    height: 160rpx;
+}
+.top .message{
+    position: fixed;
+    top: 20rpx;
+    left: 180rpx;
+}
+.top .message .name{
+    padding-left: 14rpx;
+}
+.top .message .sex{
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 4rpx;
+    margin-bottom: -6rpx;
+}
+.top .hidden{
+    display: none;
+}

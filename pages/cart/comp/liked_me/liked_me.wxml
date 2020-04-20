@@ -1,0 +1,20 @@
+<!--components/order-list/liked_me.wxml-->
+<view class="box" bindtap="clickItem">
+  <view class="wrap">
+    <view class="user-img">
+    <image src="{{itemInfo.listImgUrl}}" alt=""> </image>
+    </view>
+    <view class="user-text">
+      <view class="user-name">
+        <text>{{itemInfo.listName}}</text>
+      </view>
+      <view class="user-time">
+        <text>{{itemInfo.listTime}}</text>
+      </view>
+    </view>
+    <view class="doSome">
+      <text>{{itemInfo.listType}}</text>
+    </view>
+    <view class="{{!pointed ? 'point':''}}" ></view>
+  </view>
+</view>
