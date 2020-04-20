@@ -1,0 +1,8 @@
+<!--pages/getcomfirm/getcomfirm.wxml-->
+<view class="wrapper">
+<view class="imagewrapper">
+    <image src="../../img/联系客服.png" class="image"></image> 
+</view>
+    <view class="text">只有授权登陆后才能进去参观哦</view>
+    <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="comfirm">授权登录</button>
+</view>

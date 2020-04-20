@@ -111,6 +111,9 @@ Component({
             }
         ],
         addrIndex: [0, 0],
+
+        openid:null,
+        id:null
     },
 
     /**
@@ -149,7 +152,6 @@ Component({
             this.setData({
                 addrIndex: e.detail.value
             })
-            console.log(this.data.addrIndex);
         },
         //多选联动事件
         bindMultiPickerColumnChangeAddr: function(e) {
@@ -221,17 +223,38 @@ Component({
             if (e.detail.value.place[1] == 0) {
                 return this.alertPlain();
             }
-            // console.log(e);
+            console.log(e);
             var type = e.detail.value.type;
             var matter = this.data.matterArray[e.detail.value.matter];
             var date = this.data.dateArray[0][e.detail.value.date[0]] + '-' + this.data.dateArray[1][e.detail.value.date[1]];
-            var start = this.data.startTimeArray[e.detail.value.start_time];
-            var end = this.data.endTimeArray[e.detail.value.end_time];
+            var start_time = this.data.startTimeArray[e.detail.value.start_time];
+            var end_time = this.data.endTimeArray[e.detail.value.end_time];
             var place = this.data.addrArray[1][e.detail.value.place[1]];
-            var des = e.detail.value.description;
+            var description= e.detail.value.description || ' ';
+            var that = this;
+            wx.getStorage({
+              key: 'userInfo',
+              success: function(res) {
+                console.log(res)
+                that.setData({
+                  id : res.data.sid
+                })
+              },
+            })
+
+          this.setData({
+            openid: wx.getStorageSync('openid')
+          })
+          var openid = this.data.openid;
+          console.log(openid)
             //请求
-            // wx.request({});
-            // console.log(matter, date, start, end, place, des);
+            wx.request({
+              url: `https://www.youyougongqianxing.xyz:4430/test/add/${openid}/${matter}/${type}/${start_time}/${end_time}/${place}/${description}`,
+              method:'GET',
+              success(res){
+                console.log(1);
+              }
+            })
 
             this.triggerEvent('changeTab2');
 

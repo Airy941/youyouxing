@@ -14,7 +14,7 @@
           <text>-{{listInfo.listType}}</text>
         </view>
         <view class="middle-top-timadd">
-          <text>{{listInfo.listTime}} | {{listInfo.listAddr}}</text>
+          <text>日期：{{listInfo.datem}}月{{listInfo.dated}}日  {{listInfo.start_time}}点-{{listInfo.end_time}}点 | {{listInfo.listAddr}}</text>
         </view>
         <view class="middle-top-maj">
           学院：
@@ -22,7 +22,7 @@
         </view>
         <view class="item-middle-foot">
           详细描述：
-          <text>{{listInfo.listDiscrib}}</text>
+          <text>{{listInfo.listDescription}}</text>
         </view>
       </view>
     </view>

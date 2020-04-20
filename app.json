@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/getcomfirm/getcomfirm",
     "pages/index/index",
     "pages/cart/cart",
     "pages/user/user",
@@ -8,13 +9,14 @@
     "pages/user/about/about",
     "pages/user/getMyInfo/getMyInfo",
     "pages/user/getDone/getDone"
+
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#EE7600",
-    "navigationBarTitleText": "悠悠行",
-    "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": true
+    "navigationBarTitleText": "悠伴悠行",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
   },
   "tabBar": {
     "color": "#515151",

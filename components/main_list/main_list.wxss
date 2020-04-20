@@ -2,8 +2,8 @@
 
 .list-bar {
     padding-top: 30rpx;
-    width: 100%;
-    margin-left: 2%;
+    /* width: 100%; */
+    margin-left: 4%;
     /* border: 1px solid black; */
     /* display: flex;
     justify-content: start; */
@@ -21,6 +21,7 @@
     max-width: 92%;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .list-item-left {
@@ -75,7 +76,7 @@
 
 .middle-top-timadd {
     width: 100%;
-    font-size: 28rpx;
+    font-size: 25rpx;
     color: #424242;
 }
 
@@ -104,6 +105,8 @@
 }
 
 .list-item-right image {
+  position: absolute;
+  top: calc(50% - 17rpx);
     height: 35rpx;
     width: 40rpx;
 }

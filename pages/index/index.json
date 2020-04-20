@@ -4,4 +4,5 @@
         "my-request": "/components/my_request/my_request",
         "request-add": "/components/request_add/request_add"
     }
+
 }

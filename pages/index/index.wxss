@@ -94,7 +94,7 @@
 .tab-active {
     font-size: 40rpx;
     color: #FFA500;
-    animation: tabchange .3s linear 1;
+    animation: tabchange .1s linear 1;
     border-bottom: 2px solid #FFA500;
 }
 
@@ -103,14 +103,14 @@
         font-size: 30rpx;
         border-bottom: 2px solid #FFA500;
     }
-    25% {
+    /* 25% {
         font-size: 32rpx;
         border-bottom: 2px solid #FFA500;
     }
     50% {
         font-size: 35rpx;
         border-bottom: 2px solid #FFA500;
-    }
+    } */
     100% {
         font-size: 40rpx;
         border-bottom: 2px solid #FFA500;

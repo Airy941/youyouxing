@@ -1,6 +1,6 @@
 {
   "navigationBarBackgroundColor": "#EE7600",
-  "navigationBarTextStyle": "black",
-  "navigationBarTitleText": "我的",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "我的悠行",
   "enablePullDownRefresh": false
 }

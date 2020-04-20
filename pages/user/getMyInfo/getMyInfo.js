@@ -4,9 +4,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    ids: -1,
-    name: '',
-    sid: '',
+    ids: 0,
+    idm:0,
+    name: null,
+    sid: null,
+    sex: null,
+    major: null,
+    classid:null,
     gender: [{
         name: '保密',
         id: -1
@@ -63,120 +67,73 @@ Page({
       }
     ]
   },
-  choose(e) {
-    let that = this;
-    that.setData({
+  chooseSex(e) {
+    this.setData({
+      sex: this.data.gender[e.detail.value],
       ids: e.detail.value
     })
+    this.data.userInfo.sex = this.data.gender[e.detail.value];
+    //下面这种办法无法修改页面数据
+    /* this.data.ids = e.detail.value;*/
+  },
+  chooseMajor(e) {
+    this.setData({
+      major: this.data.college[e.detail.value],
+      idm: e.detail.value
+    })
+    this.data.userInfo.major = this.data.college[e.detail.value];
     //下面这种办法无法修改页面数据
     /* this.data.ids = e.detail.value;*/
   },
   nameInput(e) {
-    this.data.name = e.detail.value;
+    this.data.userInfo.name = e.detail.value;
   },
   sidInput(e) {
-    this.data.sid = e.detail.value;
-  },
-  genderInput(e) {
-    this.data.gender = e.detail.value;
+    this.data.userInfo.sid = e.detail.value;
   },
   classInput(e) {
-    this.data.class = e.detail.value;
-  },
-  getUserInfo(e) {
-    let that = this;
-    console.log(e);
-    let test = e.detail.errMsg.indexOf("ok");
-    if (test == '-1') {
-      wx.showToast({
-        title: '请授权后方可使用',
-        icon: 'none',
-        duration: 2000
-      });
-    } else {
-      that.setData({
-        userInfo: e.detail.userInfo
-      })
-    }
+    this.data.userInfo.classid = e.detail.value;
   },
   formSubmit: function(e) {
-    var that = this;
-
     //校检
-    let name = that.data.name;
-    if (name == '') {
-      wx.showToast({
-        title: '请先获取您的姓名',
-        icon: 'none',
-        duration: 2000
-      });
-      return false
-    }
-
-    //校检学院
-    let ids = that.data.ids;
-    let college = that.data.college;
-    if (ids == -1) {
-      wx.showToast({
-        title: '请先获取您的学院',
-        icon: 'none',
-        duration: 2000
-      });
-    }
-    wx.showLoading({
-      title: '正在提交',
-    })
-    this.setData({
-      'userInfo.province': this.data.province,
-      'userInfo.city': this.data.city,
-      'userInfo.county': this.data.county,
-      'userInfo.nickName': e.detail.value.nickName,
-      'userInfo.phone': e.detail.value.phone
-    })
-    wx.request({
-      url: '',
-      data: {
-        'userInfo': that.data.userInfo,
-      },
-      method: 'POST',
-      header: {
-        'Content-type': 'application/json'
-      },
-      success: function(res) {
-        console.log(res);
-        if (res.data.status == '1') {
-          app.setUserInfo(res.data.user);
-          wx.navigateBack({
-            delta: 1
+    let name = this.data.userInfo.name;
+    let num = this.data.userInfo.sid;
+    let sex = this.data.userInfo.sex;
+    let major = this.data.userInfo.major;
+    let classid = this.data.userInfo.classid;
+    if(name == null || num==null||sex==null||major==null||classid==null){
+      wx.showModal({
+        title: '对叭起',
+        content: '请完成所有填空题哦！',
+      })
+    }else{
+      // 表单请求
+      var that = this;
+      wx.request({
+        url: '',
+        seccess(){
+          //设置到本地setStorage
+          wx.setStorage({
+            key: 'userInfo',
+            data: that.userInfo
           })
-        } else {;
         }
-      },
-      fail: function(res) {
-        console.log(res);
-      }
-    })
-
+      })
+    }
   },
   onLoad: function() {
     var that = this
     wx.getStorage({
       key: 'userInfo',
       success: function(res) {
+        console.log(res);
         that.setData({
-          userInfo: res.data,
-          gender: res.data.gender,
-          'province': res.data.province,
-          'city': res.data.city,
-          'county': res.data.county
+          userInfo: res.data
         })
       },
       fail: function(res) {
         app.login();
       }
     })
-    console.log(that.userInfo);
-
-    console.log('初始化完成');
   }
 })

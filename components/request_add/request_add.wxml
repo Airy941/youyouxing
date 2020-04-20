@@ -10,7 +10,7 @@
         </view>
         <view class="add-form-item">
             事件描述
-            <input name="type" class="add-form-input" value="" type="text" placeholder="待填写"></input>
+            <input name="type" class="add-form-input" value=""  type="text" placeholder="待填写"></input>
         </view>
         <view class="add-form-item">
             <picker  name="date" mode="multiSelector" bindchange="bindMultiPickerChangeDate" bindcolumnchange="bindMultiPickerColumnChangeDate" class="add-form-picker" value="{{dateIndex}}" range="{{dateArray}}">

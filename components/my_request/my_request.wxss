@@ -2,8 +2,8 @@
 
 .list-bar {
     padding-top: 30rpx;
-    width: 100%;
-    margin-left: 2%;
+    /* width: 100%; */
+    margin-left: 4%;
     /* border: 1px solid black; */
     /* display: flex;
     justify-content: start; */

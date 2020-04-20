@@ -2,182 +2,8 @@
 //获取应用实例
 const app = getApp()
 
-Page({
-    // data: {
-    //   motto: 'Hello World',
-    //   userInfo: {},
-    //   hasUserInfo: false,
-    //   showFixed: false,
-    //   sortHeight: 0,
-    //   sortIndex: 0,
-    //   sortListIndex: 0,
-    //   showSort: false,
-    //   scrollFixedTop: 0,
-    //   canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    //   sortItem: ['综合排序', '距离最近', '评分最高', '起送价最低', '配送费最低', '人均高到低', '人均低到高'],
-    //   array: [{
-    //     imgUrl: '/images/nav.png',
-    //     title: '美食'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '美团超市'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '生蔬果鲜'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '美团专送'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '跑腿代购'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '下午茶'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '披萨汉堡'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '家常菜'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '小吃馆'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '快食简餐'
-    //   }],
-    //   array1: [{
-    //     imgUrl: '/images/nav.png',
-    //     title: '美食'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '美团超市'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '生蔬果鲜'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '美团专送'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '跑腿代购'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '下午茶'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '披萨汉堡'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '家常菜'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '小吃馆'
-    //   }, {
-    //     imgUrl: '/images/nav.png',
-    //     title: '快食简餐'
-    //   }],
-    //   // 1.满减
-    //   // 2.新店优惠
-    //   // 3.折扣商品
-    //   // 4.满返代金券
-    //   // 5.新用户
-    //   // 6.减配送费
-    //   // 7.领代金券
-    //   // 8.赠送商品
-    //   storeList: [{
-    //     storeId: 1,
-    //     storeName: '竹林香米线',
-    //     storeImgUrl: '/images/store.png',
-    //     score: 4.4,
-    //     saleMonth: 835,
-    //     minDelPrice: 0,
-    //     delPrice: 5,
-    //     averagePrice: 15,
-    //     delTime: 30,
-    //     service: ['支持自取'],
-    //     actives: [{
-    //         activeId: 1,
-    //         acticeText: '满20减10；满200减20；满1000减50；满1000减50'
-    //       },
-    //       {
-    //         activeId: 2,
-    //         acticeText: '本店新用户立减1元'
-    //       },
-    //       {
-    //         activeId: 3,
-    //         acticeText: '折扣商品9折起'
-    //       }
-    //     ]
-    //   }, {
-    //     storeId: 2,
-    //     storeName: '卖旺烤鸭',
-    //     storeImgUrl: '/images/store.png',
-    //     score: 3.0,
-    //     saleMonth: 835,
-    //     minDelPrice: 0,
-    //     delPrice: 5,
-    //     averagePrice: 15,
-    //     delTime: 30,
-    //     service: ['支持自取', '货到付款'],
-    //     actives: [{
-    //         activeId: 1,
-    //         acticeText: '满20减10；满200减20'
-    //       },
-    //       {
-    //         activeId: 2,
-    //         acticeText: '本店新用户立减1元'
-    //       }
-    //     ]
-    //   }, {
-    //     storeId: 3,
-    //     storeName: '肯德基',
-    //     storeImgUrl: '/images/store.png',
-    //     score: 3.0,
-    //     saleMonth: 835,
-    //     minDelPrice: 0,
-    //     delPrice: 5,
-    //     averagePrice: 15,
-    //     delTime: 30,
-    //     service: ['支持自取', '货到付款'],
-    //     actives: [{
-    //         activeId: 1,
-    //         acticeText: '满20减10；满200减20'
-    //       },
-    //       {
-    //         activeId: 2,
-    //         acticeText: '本店新用户立减1元'
-    //       }, {
-    //         activeId: 3,
-    //         acticeText: '折扣商品9折起'
-    //       }, {
-    //         activeId: 4,
-    //         acticeText: '折扣商品9折起'
-    //       }
-    //     ]
-    //   }, {
-    //     storeId: 4,
-    //     storeName: '星星炸鸡',
-    //     storeImgUrl: '/images/store.png',
-    //     score: 3.0,
-    //     saleMonth: 835,
-    //     minDelPrice: 0,
-    //     delPrice: 5,
-    //     averagePrice: 15,
-    //     delTime: 30,
-    //     service: ['支持自取', '货到付款'],
-    //     actives: [{
-    //         activeId: 1,
-    //         acticeText: '满20减10；满200减20'
-    //       },
-    //       {
-    //         activeId: 2,
-    //         acticeText: '本店新用户立减1元'
-    //       }
-    //     ]
-    //   }]
-    // },
 
+Page({
     data: {
         matterArray: ['', '自习', '运动', '拼车'],
         obectMatterArray: [{
@@ -281,76 +107,7 @@ Page({
         showMain: true,
         showAdd: false,
         showtab: true,
-        list: [{
-                matter: '约自习',
-                listType: '物理',
-                listId: 0,
-                listAddr: '老校门', //地点
-                listName: 'Airy491', //姓名
-                listMajor: '计算机科学与技术', //学院
-                listClass: '',
-                listTime: '9-10节课',
-                listImgUrl: '/img/head.JPG', //头像
-                listDiscrib: '高数/男的/帅的/成绩好的/gay蜜的/话多的/有趣的', //详细描述
-                like: false, //是否点了   ‘喜欢’
-                //事件类型 '' '自习' '运动' '拼车'
-                //'老图书馆', '数字图书馆', '第二教学楼', '第四教学楼', '第五教学楼'
-                //'风华操场', '太极操场', '风雨操场', '灯光篮球场', '桂花篮球场', '健身房'
-                //'新校门', '老校门', '西校门', '北校门', '南校门'
-            },
-            {
-                matter: '约自习',
-                listType: '高数',
-                listId: 1,
-                listName: 'FunORMA', //姓名
-                listImgUrl: '/img/head.JPG', //头像
-                listMajor: '计算机科学与技术', //学院
-                listTime: '9-10节课', //时间
-                listAddr: '新图书馆', //地点
-                listDiscrib: '高数/男的/帅的/成绩好的/gay蜜的/话多的/有趣的', //详细描述
-                like: false,
-                //select
-            },
-            {
-                matter: '约运动',
-                listType: '篮球',
-                listId: 2,
-                listName: 'Naruto', //姓名
-                listImgUrl: '/img/head.JPG', //头像
-                listMajor: '计算机科学与技术', //学院
-                listTime: '15:00', //时间
-                listAddr: '老校门', //地点
-                listDiscrib: '高数/男的/帅的/成绩好的/gay蜜的/话多的/有趣的', //详细描述
-                like: true,
-                //select
-            }, {
-                matter: '约拼车',
-                listType: '',
-                listId: 3,
-                listName: 'Airy491', //姓名
-                listImgUrl: '/img/head.JPG', //头像
-                listMajor: '计算机科学与技术', //学院
-                listTime: '7:00', //时间
-                listAddr: '老校门', //地点
-                listDiscrib: '高数/男的/帅的/成绩好的/gay蜜的/话多的/有趣的', //详细描述
-                like: true,
-                //select
-            }, {
-                matter: '约运动',
-                listType: '排球',
-                listId: 4,
-                listName: 'Airy491', //姓名
-                listImgUrl: '/img/head.JPG', //头像
-                listMajor: '计算机科学与技术', //学院
-                listTime: '7:00', //时间
-                listAddr: '老校门', //地点
-                listDiscrib: '高数/男的/帅的/成绩好的/gay蜜的/话多的/有趣的', //详细描述
-                like: true,
-
-                //select
-            },
-
-        ],
+        list: [],
         mylist: [{
                 matter: '约运动',
                 listType: '滑冰',
@@ -363,10 +120,7 @@ Page({
                 listImgUrl: '/img/head.JPG', //头像
                 listDiscrib: '高数/男的/帅的/成绩好的/gay蜜的/话多的/有趣的', //详细描述
                 like: false, //是否点了   ‘喜欢’
-                //事件类型 '' '自习' '运动' '拼车'
-                //'老图书馆', '数字图书馆', '第二教学楼', '第四教学楼', '第五教学楼'
-                //'风华操场', '太极操场', '风雨操场', '灯光篮球场', '桂花篮球场', '健身房'
-                //'新校门', '老校门', '西校门', '北校门', '南校门'
+
             },
             {
                 matter: '约拼车',
@@ -423,8 +177,23 @@ Page({
         ],
     },
     //事件处理函数
-    onPullDownRefresh: function() {
-        console.log('下拉刷新');
+  onReachBottom: function() {
+        if (this.data.showtab) {
+            console.log('下拉刷新');
+            let allList = this.data.listbegin;
+            let newList = allList.splice(0, 4);
+          let showList = this.data.list.concat(newList);
+            this.setData({
+                list: showList
+            })
+            wx.stopPullDownRefresh();
+        } else if (this.data.showList) {
+            console.log('请求刷新');
+
+            wx.stopPullDownRefresh();
+        } else {
+            wx.stopPullDownRefresh();
+        }
     },
 
     //绑定单选改变事件
@@ -559,6 +328,7 @@ Page({
         // })
     },
     changeTab2: function(e) {
+
         if (!this.data.showtab) {
             this.setData({
                 showList: true,
@@ -589,9 +359,78 @@ Page({
             showAdd: true
         })
     },
-
+    setListData() {},
+    //请求所有列表信息
+    haveAllList: function() {
+        const self = this;
+        wx.request({
+            url: 'https://www.youyougongqianxing.xyz:4430/selectAll/',
+            method: 'GET',
+            success(res) {
+                res.data.forEach((item, index) => {
+                    item.datem = item.listEndTime.slice(5, 11).slice(0, 2);
+                    item.dated = item.listEndTime.slice(5, 11).slice(3, 5);
+                    item.start_time = item.listStartTime.slice(10, 13);
+                    item.end_time = item.listEndTime.slice(10, 13);
+                });
+                self.setData({
+                    listbegin: res.data
+                })
+              let allList = self.data.listbegin;
+              let newList = allList.splice(0, 4);
+              let showList = newList.concat(self.data.list);
+              self.setData({
+                list: showList
+              })
+                
+            }
+        })
+    },
 
     onLoad: function() {
+      wx.getSetting({
+      success(res) {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success(res){
+              wx.login({
+                success(res){
+                  if (res.code) {
+                    //发起网络请求
+                    wx.request({
+                      url: 'https://www.youyougongqianxing.xyz:4430/user/login/'+res.code,
+                      method:'GET',
+                      success(res){
+                        wx.setStorage({
+                          key: 'openid',
+                          data: res.data.openid,
+                        })
+                      }
+                    })
+                  } else {
+                    console.log('登录失败！' + res.errMsg)
+                  }
+                }
+              })
+            }
+          })
+        
+        }
+      }
+    })
+        
+        this.haveAllList()
+        wx.setStorage({
+          key: "userInfo",
+          data: {
+            name: null,
+            sid: null,
+            sex: null,
+            major: null,
+            classid: null
+          }
+        })
         // if (app.globalData.userInfo) {
         //   this.setData({
         //     userInfo: app.globalData.userInfo,
@@ -622,6 +461,7 @@ Page({
 
     },
     onReady: function(e) {
+        // console.log(this.data)
         // let height;
         // let res = wx.getSystemInfoSync();
         // let winHeight = res.windowHeight;
