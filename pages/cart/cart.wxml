@@ -1,2 +1,19 @@
 <!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<view class="tab" style="background-color:#fff">
+  <view class="{{liked ?'tab-active':''}}"  bindtap="LikedMe">喜欢我的</view>
+  <view class="{{!liked ?'tab-active':''}}" bindtap="MyPick">我喜欢的</view>
+</view>
+<scroll-view class="canScroll" scroll-y> <!--//height:1004-->
+  <liked-me
+          wx:for="{{list}}"
+          wx:key="item.listId"
+          item-info ="{{item}}"
+          class="{{!liked ? 'hidden':''}}"
+>                 <!-- item-info 把每次的item传入到子组件中-->
+  </liked-me>
+  <my-request
+    class="{{liked ? 'hidden':''}}"
+  >
+    <p> hi</p>
+  </my-request>
+</scroll-view>

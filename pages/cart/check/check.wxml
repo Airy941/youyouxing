@@ -1,0 +1,9 @@
+<!--check.wxml-->
+<view class="top">
+  <image src = "{{list[item].listImgUrl}}"></image>
+  <view class ="message">
+    <text class="name">{{list[item].listName}}</text>
+    <image src="/img/male.png" class="{{sex ? 'sex':'hidden'}}"></image>
+    <image src="/img/female.png" class="{{!sex ? 'sex':'hidden'}}"></image>
+  </view>
+</view>

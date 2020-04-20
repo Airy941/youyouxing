@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "订单"
+  "usingComponents": {
+    "liked-me": "../pages/cart/comp/liked_me/liked_me",
+    "my-request": "/components/my_request/my_request"
+  }
 }
